@@ -11,7 +11,13 @@ ck_assert(add(-1,4) == 3);
 }
 END_TEST
 
-	
+START_TEST(subtest)
+{
+ck_assert(sub(3,4) == -1);
+ck_assert(sub(-1,4) == 3);
+//ck_abort_msg("test failed\n");
+}
+END_TEST
 
 int main()
 {
@@ -21,6 +27,7 @@ int main()
 
     suite_add_tcase(s1, tc1_1);
     tcase_add_test(tc1_1, sumtest);
+    tcase_add_test(tc1_1, subtest);
 
     SRunner *sr = srunner_create(s1);
     
