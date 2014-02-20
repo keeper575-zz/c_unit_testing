@@ -14,7 +14,7 @@ END_TEST
 START_TEST(subtest)
 {
 ck_assert(sub(3,4) == -1);
-ck_assert(sub(-1,4) == 3);
+ck_assert(sub(-1,4) == -5);
 //ck_abort_msg("test failed\n");
 }
 END_TEST
